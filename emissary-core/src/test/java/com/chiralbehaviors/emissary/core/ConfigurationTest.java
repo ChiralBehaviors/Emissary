@@ -15,32 +15,26 @@
  */
 package com.chiralbehaviors.emissary.core;
 
-import java.util.List;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.io.IOException;
 
 import org.junit.Test;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestTemplate;
 
-import com.hellblazer.CoRE.event.Job;
-
-import static org.junit.Assert.*;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 
 /**
  * @author hparry
  *
  */
-public class UltrastructureApiTest {
-	
-	private static final String JOB_URL = "http://localhost:8080/v1/services/data/ruleform/Job";
-	
-	//@Test
-	public void testJobResource() {
-		RestTemplate jobRes = new RestTemplate();
-		@SuppressWarnings("rawtypes")
-		ResponseEntity<List> response = jobRes.getForEntity(JOB_URL, List.class);
-		@SuppressWarnings("unchecked")
-		List<Job> jobs = response.getBody();
-		assertEquals(0, jobs.size());
-	}
+public class ConfigurationTest {
 
+	@Test
+	public void testYaml() throws JsonParseException, JsonMappingException, IOException {
+		Configuration configuration = Configuration.fromYaml(getClass().getResourceAsStream("config.yml"));
+        assertNotNull(configuration);
+        assertEquals("http://localhost:8080/v1/services/data", configuration.serviceUrl);
+	}
 }
