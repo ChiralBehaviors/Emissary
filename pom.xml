@@ -11,7 +11,15 @@
 	<modules>
 		<module>emissary-core</module>
 	</modules>
-	
+
+	<repositories>
+		<repository>
+			<id>springsource-releases</id>
+			<name>SpringSource Release Proxy</name>
+			<url>https://oss.sonatype.org/content/repositories/springsource-releases</url>
+		</repository>
+	</repositories>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -44,6 +52,11 @@
 				<groupId>com.hellblazer.CoRE</groupId>
 				<artifactId>model</artifactId>
 				<version>0.0.2-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>4.0.2.RELEASE</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
