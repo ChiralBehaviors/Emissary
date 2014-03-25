@@ -15,7 +15,6 @@
  */
 package com.chiralbehaviors.emissary.core;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -31,9 +30,6 @@ import com.hellblazer.CoRE.meta.JobModel;
  */
 public class JobQueueService {
 
-	//TODO write test with mock scheduler when(scheduler.scheduler).then(execute())
-	//scheduler =   Executors.newSingleThreadExecutor() {
-	//TODO read config from file
 	private final ScheduledExecutorService scheduler;
 	private final long period;
 	private final TimeUnit unit;
@@ -87,6 +83,10 @@ public class JobQueueService {
 		if (running.compareAndSet(true, false)) {
 			task.cancel(true);
 		}
+	}
+	
+	public boolean isRunning() {
+		return running.get();
 	}
 
 }
