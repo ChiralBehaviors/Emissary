@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.chiralbehaviors.emissary</groupId>
-	<artifactId>Emissary.app</artifactId>
+	<groupId>com.chiralBehaviors.emissary</groupId>
+	<artifactId>emissary</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Emissary.app</name>
 	<description>Top level project for the Emissary</description>
