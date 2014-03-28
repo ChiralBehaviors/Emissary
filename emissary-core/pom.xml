@@ -12,7 +12,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.hellblazer.CoRE</groupId>
+			<groupId>com.chiralbehaviors.CoRE</groupId>
 			<artifactId>model</artifactId>
 		</dependency>
 		<dependency>
@@ -28,9 +28,8 @@
 			<artifactId>dropwizard-core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.hellblazer.CoRE</groupId>
+			<groupId>com.chiralbehaviors.CoRE</groupId>
 			<artifactId>animations</artifactId>
-			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>

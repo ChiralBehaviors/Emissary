@@ -15,7 +15,7 @@
  */
 package com.chiralbehaviors.emissary.core;
 
-import com.hellblazer.CoRE.event.Job;
+import com.chiralbehaviors.CoRE.event.Job;
 
 /**
  * @author hparry

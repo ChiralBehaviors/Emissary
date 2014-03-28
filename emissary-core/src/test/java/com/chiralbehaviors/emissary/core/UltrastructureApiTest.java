@@ -15,15 +15,14 @@
  */
 package com.chiralbehaviors.emissary.core;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.List;
 
-import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import com.hellblazer.CoRE.event.Job;
-
-import static org.junit.Assert.*;
+import com.chiralbehaviors.CoRE.event.Job;
 
 /**
  * @author hparry
